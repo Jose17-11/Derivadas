@@ -1,0 +1,18 @@
+Derivada
+ 
+1. Escribir valor de coeficiente, valor de "X" y valor del exponente.
+
+2. Asignar nuevo valor al coeficiente: Coeficiente = coeficiente por exponente.
+
+3. Asignar nuevo valor al exponente: exponente = exponente -1.
+
+4. Evaluar la funcion exponencial: resultado = X elevado al exponente.
+
+5. Dar valor final al resultado: resultado = resultado * coeficiente
+
+6. Imprimir el resultado de la derivada
+
+7. En caso de que se requiera hacer con un binomio seria repetir el proceso mediante objetos.
+
+***********************************************************************************************
+
