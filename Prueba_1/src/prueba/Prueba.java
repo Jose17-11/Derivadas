@@ -2,7 +2,9 @@ package prueba;
 import java.lang.Math;
 import java.util.Scanner;
 public class Prueba {
-	
+
+	//Clase escaner para leer texto de la consola
+	Scanner sc=new Scanner(System.in);
 	//Variables universales
 	Double coe, exp, x;
 	Double r;
@@ -78,8 +80,6 @@ public class Prueba {
 
 	//Algoritmo para derivar
 	public Double derive() {
-		//Clase escaner para leer texto de la consola
-		Scanner sc=new Scanner(System.in);
 		//Leer el coeficiente 
 		coe=sc.nextDouble();
 		//Leer el valor de "X"
@@ -99,6 +99,24 @@ public class Prueba {
 
 		//Retornamos el resultado final del metodo
 		return r;
+	}
+	
+	public Double cadena() {
+		String cad;
+		Double num;
+		System.out.println("Ingrese");
+		cad=sc.nextLine();
+		
+		if(cad.equalsIgnoreCase("PI")) {
+			num=3.14159265358979323846;
+			return num;
+		}else if(cad.equalsIgnoreCase("E")){
+			num=2.718281828459045;
+			return num;
+		}else{
+			num = Double.parseDouble(cad);
+			return num;
+		}
 	}
 
 }

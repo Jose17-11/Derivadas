@@ -1,4 +1,5 @@
 package prueba;
+import integrales.Algoritmo;
 import java.lang.Math;
 import java.util.Scanner;
 public class Menu {
@@ -19,7 +20,7 @@ public class Menu {
 			System.out.println("2. 5x²+3x⁴");
 			System.out.println("3. 10x²-5x²+3x⁴");
 			System.out.println("4. 20x⁵+16x³+3x⁴-10x²");
-			System.out.println("5. Salir");
+			System.out.println("5. Integral definida: [a,b]| 2x⁴ ");
 			//Variable x que toma el valor que ingrese el usuario
 			x=leer.nextByte();
 			
@@ -27,6 +28,7 @@ public class Menu {
 			 * derivada que se requiera hacer
 			 * */
 			Prueba m1=new Prueba();
+			Algoritmo integral=new Algoritmo();
 			//sentencia switch donde se instancia cada caso del menu mostrado en consola
 			switch (x) {
 			
@@ -51,6 +53,9 @@ public class Menu {
 				break;
 			}
 			case 5:{
+				integral.integral();
+			}
+			case 6:{
 				System.out.println("Adios vuelva pronto ;)");
 				break;
 			}
@@ -64,6 +69,6 @@ public class Menu {
 			}
 			}
 			
-		}while(x!=5);
+		}while(x!=6);
 	}
 }

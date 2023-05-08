@@ -8,11 +8,25 @@ Derivada
 
 4. Evaluar la funcion exponencial: resultado = X elevado al exponente.
 
-5. Dar valor final al resultado: resultado = resultado * coeficiente
+5. Dar valor final al resultado: resultado = resultado * coeficiente.
 
-6. Imprimir el resultado de la derivada
+6. Imprimir el resultado de la derivada.
 
 7. En caso de que se requiera hacer con un binomio seria repetir el proceso mediante objetos.
 
 ***********************************************************************************************
+
+Integral
+
+1. Escribir punto a y b de la integral.
+
+2. Escribir el valor del coeficiente y exponente.
+
+3. Asignar nuevo valor al exponente: exponente = exponente +1.
+
+4. Evaluar la integral en el punto b: Evaluacion b = Coeficiente(b) elevado al exponente.
+
+5. Evaluar la integral en el punto a: Evaluacion a = Coeficiente(a) elevado al exponente.
+
+6. Obtener resultado final: Resultado = Evaluacion b - Evaluacion a.
 
