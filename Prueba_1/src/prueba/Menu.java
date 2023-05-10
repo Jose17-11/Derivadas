@@ -1,13 +1,13 @@
 package prueba;
-import integrales.Algoritmo;
+import integrales.Integrales;
 import java.lang.Math;
 import java.util.Scanner;
 public class Menu {
 
+	//Clase escaner para leer texto desde la consola
+	static Scanner leer=new Scanner(System.in);
 	//Metodo principal donde se instancian todos los metodos y procesos requeridos
 	public static void main(String[] args) {
-		//Clase escaner para leer texto desde la consola
-		Scanner leer=new Scanner(System.in);
 		//Variable que tomara un valor de los incisos mostrados como menu
 		byte x;
 		
@@ -27,29 +27,29 @@ public class Menu {
 			/**Objeto creado para instansiar los metodos que se requieran en base a la
 			 * derivada que se requiera hacer
 			 * */
-			Prueba m1=new Prueba();
-			Algoritmo integral=new Algoritmo();
+			Derivadas deri=new Derivadas();
+			Integrales integral=new Integrales();
 			//sentencia switch donde se instancia cada caso del menu mostrado en consola
 			switch (x) {
 			
 			case 1: {
-				m1.instrucciones();
-				m1.primero();
+				deri.instrucciones();
+				deri.primero();
 				break;
 			}
 			case 2:{
-				m1.instrucciones();
-				m1.segundo();
+				deri.instrucciones();
+				deri.segundo();
 				break;
 			}
 			case 3:{
-				m1.instrucciones();
-				m1.tercero();
+				deri.instrucciones();
+				deri.tercero();
 				break;
 			}
 			case 4:{
-				m1.instrucciones();
-				m1.cuarto();
+				deri.instrucciones();
+				deri.cuarto();
 				break;
 			}
 			case 5:{

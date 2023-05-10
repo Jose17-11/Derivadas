@@ -1,6 +1,6 @@
 package integrales;
 import java.util.Scanner;
-public class Algoritmo {
+public class Integrales {
 	public void integral() {
 		//Metodo Scanner para leer texto de la consola
 		Scanner sc=new Scanner(System.in);
@@ -21,7 +21,6 @@ public class Algoritmo {
 		coe=sc.nextDouble();
 		//Leer el exponente
 		exp=sc.nextDouble();
-			
 		
 		//***********************************************************************************************************
 		//Como sabemos el primer paso de una integral es sumarle 1 al exponente

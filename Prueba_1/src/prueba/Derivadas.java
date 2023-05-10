@@ -1,19 +1,20 @@
 package prueba;
 import java.lang.Math;
 import java.util.Scanner;
-public class Prueba {
+public class Derivadas {
 
 	//Clase escaner para leer texto de la consola
 	Scanner sc=new Scanner(System.in);
 	//Variables universales
-	Double coe, exp, x;
+	String coe, x, exp;
+	Double coe2, x2, exp2;
 	Double r;
 	Double r1, r2, r3, r4;
 	
 	//El metodo primero nos permite sacar una derivada a una funcion de un termino
 	public void primero(){
 		//Se crea el objeto para instanciar el metodo de derivar
-		Prueba derivar=new Prueba();
+		Derivadas derivar=new Derivadas();
 		/**Se instancia el metodo derivar de acuerdo a los terminos que tenga la derivada
 		 * que buscamos resolver
 		 * */
@@ -27,7 +28,7 @@ public class Prueba {
 	public void segundo(){
 
 		//Se crea el objeto para instanciar el metodo de derivar
-		Prueba derivar=new Prueba();
+		Derivadas derivar=new Derivadas();
 		/**Se instancia el metodo derivar de acuerdo a los terminos que tenga la derivada
 		 * que buscamos resolver
 		 * */
@@ -44,7 +45,7 @@ public class Prueba {
 	public void tercero(){
 
 		//Se crea el objeto para instanciar el metodo de derivar
-		Prueba derivar=new Prueba();
+		Derivadas derivar=new Derivadas();
 		r1=derivar.derive();
 		r2=derivar.derive();
 		r3=derivar.derive();
@@ -56,7 +57,7 @@ public class Prueba {
 	public void cuarto(){
 
 		//Se crea el objeto para instanciar el metodo de derivar
-		Prueba derivar=new Prueba();
+		Derivadas derivar=new Derivadas();
 		r1=derivar.derive();
 		r2=derivar.derive();
 		r3=derivar.derive();
@@ -80,43 +81,64 @@ public class Prueba {
 
 	//Algoritmo para derivar
 	public Double derive() {
+		
 		//Leer el coeficiente 
-		coe=sc.nextDouble();
+		coe=sc.next();
 		//Leer el valor de "X"
-		x=sc.nextDouble();
+		x=sc.next();
 		//Leer el exponente
-		exp=sc.nextDouble();
+		exp=sc.next();
+		
+		if(coe.equalsIgnoreCase("PI")) {
+			coe2=3.14159265358979323846;
+		}else if(coe.equalsIgnoreCase("E")){
+			coe2=2.718281828459045;
+		}else{
+			coe2 = Double.parseDouble(coe);
+		}
+		
+		if(x.equalsIgnoreCase("PI")) {
+			x2=3.14159265358979323846;
+		}else if(x.equalsIgnoreCase("E")){
+			x2=2.718281828459045;
+		}else{
+			x2 = Double.parseDouble(x);
+		}
+		
+		if(exp.equalsIgnoreCase("PI")) {
+			exp2=3.14159265358979323846;
+		}else if(exp.equalsIgnoreCase("E")){
+			exp2=2.718281828459045;
+		}else{
+			exp2 = Double.parseDouble(exp);
+		}
 		
 		//Definirle nuevo valor al coeficiente: Coeficiente = coeficiente * exponente
-		coe=exp*coe;
+		coe2=exp2*coe2;
 		//Definirle nuevo valor al exponente:Restarle 1 al exponente
-		exp=exp-1;
+		exp2=exp2-1;
 		
 		//Funcion que eleva cualquier numero al exponente que se le explique 
-		Double r = Math.pow(x, exp);
+		Double r = Math.pow(x2, exp2);
 		//Asignar el resultado final: El resultado que nos dio antes se multiplica por el coeficiente 
-		r=r*coe;
+		r=r*coe2;
 
 		//Retornamos el resultado final del metodo
 		return r;
 	}
-	
-	public Double cadena() {
-		String cad;
-		Double num;
-		System.out.println("Ingrese");
-		cad=sc.nextLine();
-		
-		if(cad.equalsIgnoreCase("PI")) {
-			num=3.14159265358979323846;
-			return num;
-		}else if(cad.equalsIgnoreCase("E")){
-			num=2.718281828459045;
-			return num;
-		}else{
-			num = Double.parseDouble(cad);
-			return num;
-		}
-	}
-
 }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
